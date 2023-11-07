@@ -13,4 +13,4 @@ export type ProductType = {
   image?: string
   price: number
   options?: { title: string; additionalPrice: number }[]
-}[];
+};
