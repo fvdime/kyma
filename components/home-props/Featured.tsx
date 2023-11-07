@@ -15,7 +15,7 @@ const getData = async () => {
 
 const Featured = async () => {
 
-  const productData:ProductType = await getData()
+  const productData:ProductType[] = await getData()
 
   return (
     <div className='mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
