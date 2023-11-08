@@ -22,7 +22,10 @@ const AuthForm = () => {
 
   const login = useCallback(async () => {
     try {
-      const res = signIn("credentials", { username, password, redirect: false });
+      const res = await axios.post("/api/login", {
+        username,
+        password,
+      });
 
       console.log(res)
       router.push("/");
@@ -33,7 +36,7 @@ const AuthForm = () => {
 
   const register = useCallback(async () => {
     try {
-      const res = await axios.post("/api/user", {
+      await axios.post("/api/user", {
         email,
         username,
         password,
