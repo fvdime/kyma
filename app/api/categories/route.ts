@@ -1,5 +1,5 @@
 import { prisma } from "@/utils/prismadb"
-import { NextRequest, NextResponse } from "next/server"
+import { NextResponse } from "next/server"
 
 // all categories
 export const GET = async () => {
